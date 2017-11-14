@@ -1,0 +1,5 @@
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\bin\Debug\EC.Models.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\bin\Debug\EC.Models.pdb
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.csprojResolveAssemblyReference.cache
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.pdb

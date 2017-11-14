@@ -1,0 +1,8 @@
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\bin\Debug\ConvertWordToHtml.exe.config
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\bin\Debug\ConvertWordToHtml.exe
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\bin\Debug\ConvertWordToHtml.pdb
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\bin\Debug\SautinSoft.RtfToHtml.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\bin\Debug\UseOffice.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\obj\Debug\ConvertWordToHtml.csprojResolveAssemblyReference.cache
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\obj\Debug\ConvertWordToHtml.exe
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\ConvertWordToHtml\obj\Debug\ConvertWordToHtml.pdb

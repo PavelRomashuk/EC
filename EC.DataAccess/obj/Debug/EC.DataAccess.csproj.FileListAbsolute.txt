@@ -1,0 +1,14 @@
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EC.DataAccess.dll.config
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EC.DataAccess.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EC.DataAccess.pdb
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EC.Models.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EntityFramework.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EC.Models.pdb
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EntityFramework.xml
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\obj\Debug\EC.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\obj\Debug\EC.DataAccess.dll
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\obj\Debug\EC.DataAccess.pdb
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\obj\Debug\EC.DataAccess.Migration.InitialCreate.resources
+c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.DataAccess\obj\Debug\EC.DataAccess.csproj.GenerateResource.Cache
