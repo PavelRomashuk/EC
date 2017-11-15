@@ -9,7 +9,7 @@ namespace EC.DataAccess.BLL
 {
     public class UsersBLL
     {
-        public UserCreatorResponseStatus CreateUser(User user)
+        public UserCreatorResponse CreateUser(User user)
         {
             using (DataAccess da = new DataAccess())
             {
@@ -19,23 +19,54 @@ namespace EC.DataAccess.BLL
                     try
                     {
                         da.Users.Add(user);
-                        return UserCreatorResponseStatus.Success;
+                        da.SaveChanges();
+                        return new UserCreatorResponse { Message = $"User with name {user.Name} has been created.", ResponseStatus = ResponseStatus.Success};
                     }
-                    catch
+                    catch(Exception ex)
                     {
-                        return UserCreatorResponseStatus.Error;
+                        return new UserCreatorResponse { Message = ex.Message, ResponseStatus = ResponseStatus.Error };
                     }
                 }
                 else
-                    return UserCreatorResponseStatus.UserExists;
+                    return new UserCreatorResponse { Message = $"User with name {user.Name} and email {user.EMail} already exists!", ResponseStatus = ResponseStatus.UserExists };
             }
         }
 
-        public enum UserCreatorResponseStatus
+        public UserLogonResponse Logon(string userName, string userPWD)
         {
-            Success,
-            UserExists,
-            Error
+            using (DataAccess da = new DataAccess())
+            {
+                User user = da.Users.Where(x => x.Name == userName).FirstOrDefault();
+                if (user == null)
+                    return new UserLogonResponse { ResponseStatus = ResponseStatus.UserDoesnExists, Message = $"User with name {userName} does not exists!"};
+
+                if (user != null && user.PWD != userPWD)
+                    return new UserLogonResponse { ResponseStatus = ResponseStatus.PasswordDoesNotMatch, Message = "User name and password does not match!" };
+
+                return new UserLogonResponse { ResponseStatus = ResponseStatus.Success, Message = $"User with name {userName} sucessully logged in!" };
+
+            }
         }
+    }
+
+    public class UserCreatorResponse
+    {
+        public string Message { get; set; }
+        public ResponseStatus ResponseStatus { get; set; }
+    }
+
+    public class UserLogonResponse
+    {
+        public string Message { get; set; }
+        public ResponseStatus ResponseStatus { get;set;}
+    }
+
+    public enum ResponseStatus
+    {
+        Success,
+        UserExists,
+        UserDoesnExists,
+        PasswordDoesNotMatch,
+        Error
     }
 }

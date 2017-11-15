@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutoMapper;
+using EC.Models;
+using EC.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +19,13 @@ namespace EC.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Mapper.Initialize(cfg =>
+                    {
+                        cfg.CreateMap<LogonModel, User>();
+                        cfg.CreateMap<RegisterModel, User>();
+                    }
+            );
         }
     }
 }
