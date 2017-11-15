@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="Migrations\201710111557190_InitialCreate.cs" />
     <Compile Include="Migrations\201710111557190_InitialCreate.Designer.cs">

@@ -3,3 +3,9 @@ c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models
 c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.csprojResolveAssemblyReference.cache
 c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.dll
 c:\users\pavel\documents\visual studio 2015\Projects\ConvertWordToHtml\EC.Models\obj\Debug\EC.Models.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\bin\Debug\EC.Models.dll
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\bin\Debug\EC.Models.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\obj\Debug\EC.Models.csprojResolveAssemblyReference.cache
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\obj\Debug\EC.Models.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\obj\Debug\EC.Models.dll
+C:\Users\Pavel\Documents\Visual Studio 2015\Projects\EC\EC.Models\obj\Debug\EC.Models.pdb

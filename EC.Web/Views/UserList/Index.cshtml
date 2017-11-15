@@ -1,0 +1,12 @@
+﻿@model List<EC.Web.Models.LogonModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul>
+    @foreach (EC.Web.Models.LogonModel user in Model)
+    {
+        <li>@user.UserName</li>
+    }
+</ul>
+
