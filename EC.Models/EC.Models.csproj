@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="UserActionResponses.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="ExaminationAnswer.cs" />
     <Compile Include="Examination.cs" />

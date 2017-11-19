@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  ec.webcore:
+    image: ec.webcore
+    build:
+      context: ./EC.WebCore
+      dockerfile: Dockerfile

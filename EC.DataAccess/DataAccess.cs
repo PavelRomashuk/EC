@@ -1,13 +1,10 @@
 ﻿using EC.Models;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace EC.DataAccess
 {
-    public class DataAccess: DbContext
+    public class DatabaseAccess: DbContext
     {
-        public DataAccess(): this("name=EbglishCource") {}
-
-        public DataAccess(string connectionString): base(connectionString) {}
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Theory> Theory { get; set; }
@@ -20,32 +17,42 @@ namespace EC.DataAccess
         public virtual DbSet<Examination> Examinations { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"data source=.;initial catalog=EnglishCource;integrated security=True;MultipleActiveResultSets=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Examination>()
                 .HasMany(e => e.ExaminationQuestions)
-                .WithRequired(e => e.Examination)
-                .WillCascadeOnDelete(false);
+                .WithOne(x => x.Examination)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Examination>()
                 .HasMany(e => e.ExaminationAnswers)
-                .WithRequired(e => e.Examination)
-                .WillCascadeOnDelete(false);
+                .WithOne(x => x.Examination)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ExaminationQuestion>()
                 .HasMany(e => e.ExaminationAnswers)
-                .WithRequired(e => e.ExaminationQuestion)
-                .WillCascadeOnDelete(false);
+                .WithOne(x => x.ExaminationQuestion)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ScheduledTask>()
                 .HasMany(e => e.Tasks)
-                .WithRequired(e => e.ScheduledTask)
-                .WillCascadeOnDelete(false);
+                .WithOne(e => e.ScheduledTask)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ScheduledTaskTemplate>()
                 .HasMany(e => e.ScheduledTaskTemplateContents)
-                .WithRequired(e => e.ScheduledTaskTemplate)
-                .WillCascadeOnDelete(false);
+                .WithOne(e => e.ScheduledTaskTemplate)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
