@@ -13168,6 +13168,7 @@
       "EC.Contracts >= 1.0.0",
       "EC.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
+      "Microsoft.AspNetCore.Cors >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1"
     ]
@@ -13224,6 +13225,10 @@
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
+          "Microsoft.AspNetCore.Cors": {
             "target": "Package",
             "version": "2.0.1"
           },

@@ -1,0 +1,25 @@
+﻿<h1>Users</h1>
+
+<p *ngIf="!users"><em>No users available</em></p>
+
+<table class='table' *ngIf="users">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Name</th>
+            <th>EMail</th>
+            <th>Phone</th>
+            <th>UserType</th>
+            <th>PWD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.UserId }}</td>
+            <td>{{ user.Name }}</td>
+            <td>{{ user.EMail }}</td>
+            <td>{{ user.UserType }}</td>
+            <td>{{ user.PWD }}</td>
+        </tr>
+    </tbody>
+</table>
