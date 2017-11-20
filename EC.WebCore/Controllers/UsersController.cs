@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EC.Models;
 using EC.Contracts;
+using Microsoft.AspNetCore.Cors;
 
 namespace EC.WebCore.Controllers
 {
     [Route("api/[controller]")]
+    //[EnableCors("MyPolicy")]
     public class UsersController : Controller
     {
         protected IAccountContract _accountContract;

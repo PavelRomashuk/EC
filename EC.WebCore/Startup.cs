@@ -1,20 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using EC.Contracts;
 using EC.DataAccess.BLL;
-using EC.WebCore.Controllers;
-using Microsoft.EntityFrameworkCore;
-using EC.DataAccess;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace EC.WebCore
 {
@@ -31,7 +20,7 @@ namespace EC.WebCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(opt => opt.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver());
             services.AddTransient<IAccountContract, UsersBLL>();
         }
 
@@ -43,8 +32,10 @@ namespace EC.WebCore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder.AllowAnyOrigin()
+                                    .AllowAnyHeader()
+                                    .AllowAnyMethod());
             app.UseMvc();
-            app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }
