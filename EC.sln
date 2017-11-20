@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertWordToHtml", "ConvertWordToHtml\ConvertWordToHtml.csproj", "{9D1B4334-2949-42B8-B64E-58BFF71D7533}"
 EndProject
@@ -9,15 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC.Models", "EC.Models\EC.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC.DataAccess", "EC.DataAccess\EC.DataAccess.csproj", "{5FB2BB59-93D9-4B41-A431-C7A933D98AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC.Web", "EC.Web\EC.Web.csproj", "{777F86A6-191C-4948-8C3C-1F3AB4374C94}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EC.WebCore", "EC.WebCore\EC.WebCore.csproj", "{46E93D1C-C279-4F2A-BF29-94EDA07C373F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A4E66691-79BB-40F9-80B4-183D59BE3192}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC.Contracts", "EC.Contracts\EC.Contracts.csproj", "{FC43EE83-EFD5-462E-A898-5E33CF4F4AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC", "WebApplication1\EC.csproj", "{56702ADB-8686-44FC-93AE-2A7A2FD7EF4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EC", "WebApplication1\EC.csproj", "{56702ADB-8686-44FC-93AE-2A7A2FD7EF4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{5FB2BB59-93D9-4B41-A431-C7A933D98AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB2BB59-93D9-4B41-A431-C7A933D98AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB2BB59-93D9-4B41-A431-C7A933D98AEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{777F86A6-191C-4948-8C3C-1F3AB4374C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{777F86A6-191C-4948-8C3C-1F3AB4374C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{777F86A6-191C-4948-8C3C-1F3AB4374C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{777F86A6-191C-4948-8C3C-1F3AB4374C94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46E93D1C-C279-4F2A-BF29-94EDA07C373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46E93D1C-C279-4F2A-BF29-94EDA07C373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E93D1C-C279-4F2A-BF29-94EDA07C373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
