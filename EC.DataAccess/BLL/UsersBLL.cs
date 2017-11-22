@@ -42,7 +42,11 @@ namespace EC.DataAccess.BLL
                 if (user != null && user.PWD != userPWD)
                     return new UserLogonResponse { ResponseStatus = ResponseStatus.PasswordDoesNotMatch, Message = "User name and password does not match!" };
 
-                return new UserLogonResponse { ResponseStatus = ResponseStatus.Success, Message = $"User with name {userName} sucessully logged in!" };
+                return new UserLogonResponse {
+                    ResponseStatus = ResponseStatus.Success,
+                    Message = $"User with name {userName} sucessully logged in!",
+                    LoggedInUser = user
+                };
 
             }
         }

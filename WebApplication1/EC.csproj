@@ -21,10 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\LogOn\logon.component.ts" />
     <None Remove="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\LogOn\logon.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
 

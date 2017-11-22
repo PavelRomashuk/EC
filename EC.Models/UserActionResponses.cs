@@ -17,6 +17,7 @@ namespace EC.Models
     {
         public string Message { get; set; }
         public ResponseStatus ResponseStatus { get; set; }
+        public User LoggedInUser { get; set; }
     }
 
     public enum ResponseStatus
