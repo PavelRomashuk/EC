@@ -1,21 +1,34 @@
 ﻿import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+//import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'logon',
     templateUrl: './logon.component.html'
 })
-export class UsersComponent {
+export class LogonComponent {
     public logon: Logon;
 
-    constructor(http: Http) {
-        http.get('http://localhost:50642/api/Users').subscribe(result => {
-            this.logon = result.json() as Logon;
-        }, error => console.error(error));
+    constructor(private httpClient: Http) {
+
+    }
+    ngOnInit() {
+        this.logon = new Logon();
+    }
+
+    loginUser() {
+        var userName = this.logon.Name;
+        var userPwd = this.logon.PWD;
+
+        this.httpClient.post('http://localhost:50642/token', { username: userName, password: userPwd }).
+            subscribe(
+            data => {
+                localStorage.setItem("token", data.text());
+            });
     }
 }
 
-interface Logon {
+export class Logon {
     Name: string;
     PWD: string;
 }

@@ -1,18 +1,17 @@
-﻿<h1>Log on</h1>
-
-<p>Please enter your credentials</p>
-
-<table class='table'>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>PWD</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{ user.Name }}</td>
-            <td>{{ user.PWD }}</td>
-        </tr>
-    </tbody>
-</table>
+﻿<div class="col-md-6 col-md-offset-3">
+    <h2>Login</h2>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input [(ngModel)]="logon.Name" type="text" name="username" id="username" class="form-control" required />
+        <span *ngIf="!logon.Name" class="help-block">{{logon.Name}}Username is required</span>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input [(ngModel)]="logon.PWD" type="password" name="password" id="password" class="form-control" required />
+        <span *ngIf="!logon.PWD" class="help-block">Password is required</span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" [disabled]="!logon.Name || !logon.PWD" class="btn btn-primary">Login</button>
+        <a href="#!/register" class="btn btn-link">Register</a>
+    </div>
+</div>
