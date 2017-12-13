@@ -22,9 +22,7 @@ export class LogonComponent {
 
         this.httpClient.post('http://localhost:50642/token', { username: userName, password: userPwd }).
             subscribe(
-            data => {
-                localStorage.setItem("token", data.text());
-            });
+            data => { localStorage.setItem("token", data.text()); });
     }
 }
 

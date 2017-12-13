@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="jwt-decode" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
   </ItemGroup>
 
@@ -21,11 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\auth\auth.service.ts" />
     <None Remove="ClientApp\app\components\LogOn\logon.component.ts" />
     <None Remove="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\auth\auth.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\LogOn\logon.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
