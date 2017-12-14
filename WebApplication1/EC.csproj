@@ -23,12 +23,14 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\auth\auth.service.ts" />
+    <None Remove="ClientApp\app\auth\token.interceptor.ts" />
     <None Remove="ClientApp\app\components\LogOn\logon.component.ts" />
     <None Remove="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\auth\auth.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\auth\token.interceptor.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\LogOn\logon.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\Users\users.component.ts" />
   </ItemGroup>
