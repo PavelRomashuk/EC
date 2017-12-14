@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-//import { HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -12,6 +12,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { UsersComponent } from './components/Users/users.component';
 import { LogonComponent } from './components/LogOn/logon.component';
+import { TokenInterceptor } from './auth/token.interceptor';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,13 @@ import { LogonComponent } from './components/LogOn/logon.component';
             { path: 'logon', component: LogonComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptor,
+            multi: true
+        }
     ]
 })
 export class AppModuleShared {
